@@ -108,7 +108,7 @@ rf = RandomForestClassifier(n_estimators=100, random_state=1)
 rf.fit(x_train, y_train)
 print('accuracy of Random Forest Classification: ', rf.score(x_test, y_test))
 ```
-# FINDING THE N VALUE FOR KNN
+# FINDING THE n VALUE FOR Knn
 
 ```
 # find best n value for knn
