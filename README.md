@@ -55,6 +55,7 @@ plt.show()
 x_cancer = cancer.iloc[:,1:]
 y = cancer['diagnosis']
 ```
+![breast x y value](https://github.com/adepel80/Breast-cancer/assets/123180341/b164af94-3178-4f2a-89b1-285a8d54915a)
 
 # TRAIN AND TEST
 ```
@@ -67,6 +68,8 @@ print('x-test shape : ', x_test.shape)
 print('y-test shape : ', y_test.shape)
 
 ```
+![breast train and test](https://github.com/adepel80/Breast-cancer/assets/123180341/68850f14-1fb8-4fd5-94d3-3cd680cfeade)
+
 # KNN 
 ```
 from sklearn.neighbors import KNeighborsClassifier
@@ -77,6 +80,7 @@ corrected_value = np.array(y_test)
 
 print('kNN(with k=3) accuracy is : ', knn.score(x_test, y_test))
 ```
+![breast knn](https://github.com/adepel80/Breast-cancer/assets/123180341/14011fe6-822f-4c71-8489-c8ca4a1bba9b)
 # SVC
 ```
 from sklearn.svm import SVC
@@ -85,6 +89,7 @@ svm.fit(x_train, y_train)
 print('accuracy of SVM : ', svm.score(x_test, y_test))
 
 ```
+![breast svc](https://github.com/adepel80/Breast-cancer/assets/123180341/67d9f226-2414-4e78-8337-b6f4e8638665)
 # GauusianNB
 ```
 from sklearn.naive_bayes import GaussianNB
@@ -93,6 +98,7 @@ nb.fit(x_train, y_train)
 print ('accuracy of naive bayes : ', nb.score(x_test, y_test))
 
 ```
+![breast gaussan](https://github.com/adepel80/Breast-cancer/assets/123180341/dbe9855a-acf1-4a72-b05f-a3945f39e032)
 # DECISSION TREE CLASSIFIER
 ```
 # Descision tree
@@ -101,6 +107,8 @@ dt = DecisionTreeClassifier()
 dt.fit(x_train, y_train)
 print('accuracy of Decision Tree Classification: ', dt.score(x_test, y_test))
 ```
+![breast decission](https://github.com/adepel80/Breast-cancer/assets/123180341/60375379-14c0-421e-bde3-434be0b9286e)
+
 # RANDOM FOREST CLASSIFIER
 ```
 from sklearn.ensemble import RandomForestClassifier
@@ -108,6 +116,9 @@ rf = RandomForestClassifier(n_estimators=100, random_state=1)
 rf.fit(x_train, y_train)
 print('accuracy of Random Forest Classification: ', rf.score(x_test, y_test))
 ```
+![breast RF](https://github.com/adepel80/Breast-cancer/assets/123180341/e9bef14f-5011-482c-9189-07d1557e4e32)
+
+
 # FINDING THE n VALUE FOR Knn
 
 ```
@@ -135,6 +146,7 @@ plt.grid()
 plt.xticks(best_neig)
 plt.show()
 ```
+![BREAST KNN visual](https://github.com/adepel80/Breast-cancer/assets/123180341/7d1bdeda-9b07-4aa8-bdac-804760035ae9)
 
 
 #k- Nearest Neighbour (k-NN) classification technique:
