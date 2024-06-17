@@ -44,6 +44,98 @@ pd.plotting.scatter_matrix(cancer.iloc[:, 7:13],
                                        edgecolor= "black")
 plt.show()
 ```
+![concave](https://github.com/adepel80/Breast-cancer/assets/123180341/e18e464d-32f1-4937-944b-8e0715616a13)
+
+# CHOOSING THE X AND Y VALUE 
+```
+#Choosing x and y values
+
+#x is our features except diagnosis (classification columns)
+#y is diagnosis
+x_cancer = cancer.iloc[:,1:]
+y = cancer['diagnosis']
+```
+
+# TRAIN AND TEST
+```
+
+from sklearn.model_selection import train_test_split
+x_train, x_test, y_train, y_test = train_test_split(x,y,test_size =0.3, random_state = 1)
+print('x-train shape : ', x_train.shape)
+print('y-train shape : ', y_train.shape)
+print('x-test shape : ', x_test.shape)
+print('y-test shape : ', y_test.shape)
+
+```
+# KNN 
+```
+from sklearn.neighbors import KNeighborsClassifier
+knn = KNeighborsClassifier(n_neighbors = 3)
+knn.fit(x_train, y_train)
+predcted_value = knn.predict (x_test)
+corrected_value = np.array(y_test)
+
+print('kNN(with k=3) accuracy is : ', knn.score(x_test, y_test))
+```
+# SVC
+```
+from sklearn.svm import SVC
+svm = SVC(random_state = 1, gamma = 'auto')
+svm.fit(x_train, y_train)
+print('accuracy of SVM : ', svm.score(x_test, y_test))
+
+```
+# GauusianNB
+```
+from sklearn.naive_bayes import GaussianNB
+nb = GaussianNB()
+nb.fit(x_train, y_train)
+print ('accuracy of naive bayes : ', nb.score(x_test, y_test))
+
+```
+# DECISSION TREE CLASSIFIER
+```
+# Descision tree
+from sklearn.tree import DecisionTreeClassifier
+dt = DecisionTreeClassifier()
+dt.fit(x_train, y_train)
+print('accuracy of Decision Tree Classification: ', dt.score(x_test, y_test))
+```
+# RANDOM FOREST CLASSIFIER
+```
+from sklearn.ensemble import RandomForestClassifier
+rf = RandomForestClassifier(n_estimators=100, random_state=1)
+rf.fit(x_train, y_train)
+print('accuracy of Random Forest Classification: ', rf.score(x_test, y_test))
+```
+# FINDING THE N VALUE FOR KNN
+
+```
+# find best n value for knn
+best_neig= range(1,25) 
+train_accuracy_list =[]
+test_accuracy_list =[]
+
+for each in best_neig:
+    knn = KNeighborsClassifier(n_neighbors =each)
+    knn.fit(x_train,  y_train)
+    train_accuracy_list.append( knn.score(x_train, y_train))    
+    test_accuracy_list.append( knn.score(x_test, y_test))    
+    
+        
+print( 'best k for Knn : {} , best accuracy : {}'.format(test_accuracy_list.index(np.max(test_accuracy_list))+1, np.max(test_accuracy_list)))
+plt.figure(figsize=[13,8])
+plt.plot(best_neig, train_accuracy_list,label = 'Train Accuracy')
+plt.plot(best_neig, test_accuracy_list,label = 'Test Accuracy')
+plt.title('Neighbors vs accuracy ')
+plt.xlabel('Number of Neighbors')
+plt.ylabel('Accuracy')
+plt.legend()
+plt.grid()
+plt.xticks(best_neig)
+plt.show()
+```
+
 
 #k- Nearest Neighbour (k-NN) classification technique:
 
