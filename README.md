@@ -148,6 +148,14 @@ plt.show()
 ```
 ![BREAST KNN visual](https://github.com/adepel80/Breast-cancer/assets/123180341/7d1bdeda-9b07-4aa8-bdac-804760035ae9)
 
+# RESULT 
+SVMs shows the accuracy of :  0.631578947368421
+kNN(with k=3) accuracy is :  0.9239766081871345
+Naive bayes : accuracy of naive bayes :  0.9473684210526315
+accuracy of Decision Tree Classification:  0.935672514619883
+accuracy of Random Forest Classification:  0.9532163742690059
+
+
 
 #k- Nearest Neighbour (k-NN) classification technique:
 
@@ -156,13 +164,5 @@ k-NN is a non- parametric method used for classification. In this classification
 #Support Vector Machine (SVM) classification Technique:
 
 Support Vector Machine (SVM) is a supervised machine learning algorithm which can be used for both classification or regression challenges. However, it is mostly used in classification problems. In this algorithm, we plot each data item as a point in n-dimensional space (where n is number of features you have) with the value of each feature being the value of a particular coordinate. Then, we perform classification by finding the hyper-plane that differentiate the two classes very well
-
-#Outcome
-
-It can be seen that as the training data size increases, SVM performs better than kNN and has more accuracy.
-
-kNN is quite a good classifier but its performance depends on the value of k. It gives poor results for lower values of k and best results as the value of k increases.
-
-PCA is more sensitive to SVM than kNN .As the value of Principle Component (PC) is increased, SVM gives better results and accuracy score is more than kNN.
 
 
