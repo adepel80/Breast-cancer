@@ -90,7 +90,7 @@ print('accuracy of SVM : ', svm.score(x_test, y_test))
 
 ```
 ![breast svc](https://github.com/adepel80/Breast-cancer/assets/123180341/67d9f226-2414-4e78-8337-b6f4e8638665)
-# GauusianNB
+# GaussianNB
 ```
 from sklearn.naive_bayes import GaussianNB
 nb = GaussianNB()
