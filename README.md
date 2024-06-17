@@ -149,10 +149,15 @@ plt.show()
 ![BREAST KNN visual](https://github.com/adepel80/Breast-cancer/assets/123180341/7d1bdeda-9b07-4aa8-bdac-804760035ae9)
 
 # RESULT 
-SVMs shows the accuracy of :  0.631578947368421
-kNN(with k=3) accuracy is :  0.9239766081871345
-Naive bayes : accuracy of naive bayes :  0.9473684210526315
+### SVMs 
+SVM shows the accuracy of :  0.631578947368421
+### kNN
+KNN(with k=3) accuracy is :  0.9239766081871345
+### Naive bayes
+Naive bayes: accuracy of naive bayes :  0.9473684210526315
+### accuracy of Decision Tree Classification
 accuracy of Decision Tree Classification:  0.935672514619883
+### accuracy of Random Forest Classification
 accuracy of Random Forest Classification:  0.9532163742690059
 
 
